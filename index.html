@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rejwan Rafi — Graphic Designer</title>
+<meta name="description" content="Rejwan Rafi, graphic designer from Bogra, Bangladesh. Logos, brand identity, thumbnails, print and merch design. Available for freelance and full-time work.">
+<meta name="theme-color" content="#f6f3ff">
+<meta property="og:title" content="Rejwan Rafi — Graphic Designer">
+<meta property="og:image" content="rejwan.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://mir-s3-cdn-cf.behance.net" crossorigin>
+<link rel="dns-prefetch" href="https://mir-s3-cdn-cf.behance.net">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+ --bg:#f7f5ff;--card:#ffffff;--text:#1b1740;--mute:#625f80;--line:#e6e2f7;
+ --g1:#6c5ce7;--g2:#ec5fa8;--g3:#ff9a5a;
+ --grad:linear-gradient(120deg,var(--g1),var(--g2) 55%,var(--g3));
+ --shadow:0 10px 30px -12px rgba(108,92,231,.28);
+ --ease:cubic-bezier(.22,.8,.3,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--text);line-height:1.65;background:var(--bg);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+::selection{background:var(--g2);color:#fff}
+
+/* animated background */
+.bg{position:fixed;inset:0;z-index:-1;overflow:hidden;background:linear-gradient(160deg,#f7f5ff,#fff3f8 55%,#fff6ee)}
+.bg i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;animation:float 16s ease-in-out infinite}
+.bg i:nth-child(1){width:420px;height:420px;background:#b9acff;top:-120px;left:-100px}
+.bg i:nth-child(2){width:380px;height:380px;background:#ffb3d4;top:30%;right:-120px;animation-delay:-5s}
+.bg i:nth-child(3){width:360px;height:360px;background:#ffd2a8;bottom:-120px;left:25%;animation-delay:-9s}
+@keyframes float{50%{transform:translate(40px,-30px) scale(1.12)}}
+
+/* progress + header */
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:30}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.7);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+header.s{box-shadow:0 8px 24px -14px rgba(60,40,140,.35)}
+nav{display:flex;justify-content:space-between;align-items:center;height:66px}
+.logo{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:600}
+.logo span,.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+nav ul{display:flex;gap:6px;list-style:none}
+nav ul a{display:block;padding:8px 14px;border-radius:999px;font-size:.88rem;font-weight:500;color:var(--mute);transition:.25s}
+nav ul a:hover,nav ul a.on{color:var(--g1);background:rgba(108,92,231,.1)}
+
+/* buttons */
+.btn{position:relative;display:inline-flex;align-items:center;gap:8px;overflow:hidden;padding:14px 28px;border-radius:999px;font-weight:600;font-size:.92rem;border:0;cursor:pointer;font-family:inherit;transition:transform .3s var(--ease),box-shadow .3s;isolation:isolate}
+.btn.fill{color:#fff;background:var(--grad);background-size:160% 100%;box-shadow:0 12px 26px -10px rgba(236,95,168,.65)}
+.btn.fill:hover{transform:translateY(-3px);box-shadow:0 18px 32px -10px rgba(236,95,168,.7);background-position:100% 0}
+.btn.line{color:var(--g1);background:#fff;box-shadow:inset 0 0 0 1.5px var(--g1)}
+.btn.line:hover{transform:translateY(-3px);background:var(--g1);color:#fff}
+.btn:active{transform:translateY(0) scale(.97)}
+.btn::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:left .6s;z-index:-1}
+.btn:hover::after{left:130%}
+.btn svg{width:16px;height:16px;transition:transform .3s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.rip{position:absolute;border-radius:50%;background:rgba(255,255,255,.5);transform:scale(0);animation:rip .6s ease-out;pointer-events:none}
+@keyframes rip{to{transform:scale(3);opacity:0}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:center;padding:84px 0 70px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);padding:7px 16px;border-radius:999px;font-size:.8rem;font-weight:600;color:var(--mute);box-shadow:var(--shadow)}
+.pill i{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 0 rgba(34,197,94,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+h1{font-size:clamp(2.5rem,5.6vw,4.2rem);line-height:1.08;margin:20px 0 18px;font-weight:800;letter-spacing:-.03em}
+.hero p{color:var(--mute);max-width:490px;font-size:1.05rem}
+.btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.photo{position:relative;max-width:440px;justify-self:center}
+.ring{padding:6px;border-radius:30px;background:var(--grad);box-shadow:0 30px 60px -24px rgba(108,92,231,.55);animation:bob 6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-10px)}}
+.ring img{width:100%;display:block;border-radius:25px}
+.chip{position:absolute;background:#fff;border-radius:14px;padding:10px 16px;font-size:.8rem;font-weight:600;box-shadow:var(--shadow);border:1px solid var(--line);animation:bob 5s ease-in-out infinite}
+.chip.a{left:-26px;bottom:48px;animation-delay:-2s}
+.chip.b{right:-18px;top:34px;animation-delay:-1s}
+.chip b{display:block;font-size:1.1rem}
+
+/* sections */
+section{padding:84px 0}
+.eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700}
+h2{font-size:clamp(1.9rem,4vw,2.7rem);font-weight:800;letter-spacing:-.025em;margin:8px 0 10px}
+.sub{color:var(--mute);margin-bottom:38px;max-width:560px}
+.about{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center}
+.about p{color:var(--mute);margin-bottom:14px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow);transition:transform .35s var(--ease)}
+.stat:hover{transform:translateY(-6px)}
+.stat b{display:block;font-size:2rem;font-weight:800}
+.stat span{font-size:.78rem;color:var(--mute);text-transform:uppercase;letter-spacing:.1em;font-weight:600}
+
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.svc{position:relative;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;overflow:hidden;transition:transform .35s var(--ease),box-shadow .35s}
+.svc::before{content:"";position:absolute;inset:0;background:var(--grad);opacity:0;transition:opacity .35s;z-index:0}
+.svc>*{position:relative;z-index:1;transition:color .3s}
+.svc:hover{transform:translateY(-8px);box-shadow:0 24px 40px -18px rgba(236,95,168,.6)}
+.svc:hover::before{opacity:1}
+.svc:hover h3,.svc:hover p{color:#fff}
+.ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:1.3rem;background:linear-gradient(135deg,#ece8ff,#ffe6f1);margin-bottom:16px}
+.svc h3{font-size:1.08rem;margin-bottom:6px}
+.svc p{color:var(--mute);font-size:.92rem}
+
+/* work */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+.filters button{background:#fff;border:1px solid var(--line);color:var(--mute);padding:9px 20px;border-radius:999px;cursor:pointer;font:inherit;font-size:.86rem;font-weight:600;transition:.25s}
+.filters button:hover{border-color:var(--g1);color:var(--g1);transform:translateY(-2px)}
+.filters button.on{background:var(--grad);color:#fff;border-color:transparent;box-shadow:0 10px 20px -10px rgba(236,95,168,.7)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.work{display:block;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:transform .4s var(--ease),box-shadow .4s;will-change:transform}
+.work.hide{display:none}
+.work:hover{transform:translateY(-8px);box-shadow:0 28px 44px -22px rgba(108,92,231,.55)}
+.im{position:relative;aspect-ratio:4/3;overflow:hidden;background:linear-gradient(110deg,#efeaff 30%,#fff 45%,#efeaff 60%);background-size:200% 100%;animation:sh 1.3s linear infinite}
+.im.ok,.im.fail{animation:none}
+@keyframes sh{to{background-position:-200% 0}}
+.im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .6s,transform .8s var(--ease)}
+.im.ok img{opacity:1;transform:scale(1)}
+.work:hover .im.ok img{transform:scale(1.08)}
+.im.fail{background:var(--grad);display:grid;place-items:center;color:#fff;font-weight:800;font-size:2.4rem;letter-spacing:-.03em}
+.im .ov{position:absolute;inset:0;display:grid;place-items:center;background:rgba(40,25,110,.45);color:#fff;font-weight:600;font-size:.9rem;opacity:0;transition:opacity .3s}
+.work:hover .ov{opacity:1}
+.t{padding:16px 18px 18px}
+.t small{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.t h3{font-size:1rem;font-weight:700;margin-top:2px}
+.more{text-align:center;margin-top:40px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:40px}
+.cl a{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 20px;margin-bottom:14px;transition:transform .3s var(--ease),box-shadow .3s,border-color .3s}
+.cl a:hover{transform:translateX(8px);box-shadow:var(--shadow);border-color:var(--g2)}
+.cl .ic{margin:0;flex:none}
+.cl small{display:block;color:var(--mute);font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700}
+form{display:grid;gap:14px;background:#fff;border:1px solid var(--line);border-radius:26px;padding:28px;box-shadow:var(--shadow)}
+input,textarea{width:100%;background:#faf8ff;border:1.5px solid var(--line);color:var(--text);padding:14px 16px;border-radius:14px;font:inherit;transition:.25s}
+input:focus,textarea:focus{outline:none;border-color:var(--g1);background:#fff;box-shadow:0 0 0 4px rgba(108,92,231,.14)}
+textarea{min-height:130px;resize:vertical}
+footer{padding:30px 0;text-align:center;color:var(--mute);font-size:.85rem;border-top:1px solid var(--line);background:rgba(255,255,255,.6)}
+#top-btn{position:fixed;right:20px;bottom:20px;width:46px;height:46px;border-radius:50%;border:0;background:var(--grad);color:#fff;font-size:1.2rem;cursor:pointer;box-shadow:0 12px 24px -8px rgba(236,95,168,.7);opacity:0;transform:translateY(20px);pointer-events:none;transition:.35s var(--ease);z-index:25}
+#top-btn.show{opacity:1;transform:none;pointer-events:auto}
+#top-btn:hover{transform:translateY(-4px)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(32px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+ .hero,.about,.contact{grid-template-columns:1fr}
+ .hero{padding:44px 0}.photo{order:-1;max-width:340px}
+ .grid,.services{grid-template-columns:1fr 1fr}
+ nav ul a{padding:7px 9px;font-size:.78rem}
+}
+@media(max-width:560px){
+ .grid,.services{grid-template-columns:1fr}
+ .chip.a{left:-6px}.chip.b{right:-6px}
+ .logo{font-size:1.1rem}nav ul a{padding:6px 7px;font-size:.72rem}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01s!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="bg"><i></i><i></i><i></i></div>
+<div id="bar"></div>
+<header id="hd"><div class="wrap"><nav>
+ <a href="#top" class="logo">Rejwan<span>.</span></a>
+ <ul id="links"><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#work">Work</a></li><li><a href="#contact">Contact</a></li></ul>
+</nav></div></header>
+
+<main id="top">
+<div class="wrap">
+ <div class="hero">
+  <div>
+   <span class="pill rv"><i></i>Available for freelance &amp; full-time</span>
+   <h1 class="rv" style="--d:.1s">Hi, I'm Rejwan.<br>I design <span class="grad">brands people remember.</span></h1>
+   <p class="rv" style="--d:.2s">Graphic designer from Bogra, Bangladesh. I create logos, brand identities, thumbnails and print designs that look clean and work hard for your business.</p>
+   <div class="btns rv" style="--d:.3s">
+    <a class="btn fill" href="#work">View my work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="btn line" href="#contact">Hire me</a>
+   </div>
+  </div>
+  <div class="photo rv" style="--d:.2s">
+   <div class="ring"><img src="rejwan.png" alt="Portrait of Rejwan Rafi, graphic designer" fetchpriority="high"></div>
+   <div class="chip a"><b>Graphic Designer</b>Logo · Brand · Print</div>
+   <div class="chip b">🎨 Upwork Freelancer</div>
+  </div>
+ </div>
+</div>
+
+<section id="about"><div class="wrap">
+ <div class="about">
+  <div class="rv">
+   <div class="eyebrow grad">About me</div>
+   <h2>Turning ideas into clear, beautiful visuals.</h2>
+   <p>I'm a graphic designer who enjoys building logos, brand identities, merchandise mockups and social media graphics. Every project starts with understanding the client, then ends with design that fits the audience.</p>
+   <p>I work as a graphic designer on Upwork and have shared my work on Behance since 2019. I'm open to freelance projects and full-time roles.</p>
+  </div>
+  <div class="stats">
+   <div class="stat rv"><b class="grad" data-n="1500" data-s="+">0</b><span>Project views</span></div>
+   <div class="stat rv" style="--d:.1s"><b class="grad">2019</b><span>On Behance</span></div>
+   <div class="stat rv" style="--d:.2s"><b class="grad" data-n="12" data-s="+">0</b><span>Projects</span></div>
+   <div class="stat rv" style="--d:.3s"><b class="grad">Upwork</b><span>Freelancer</span></div>
+  </div>
+ </div>
+</div></section>
+
+<section id="services"><div class="wrap">
+ <div class="eyebrow grad rv">Services</div>
+ <h2 class="rv">What I can do for you</h2>
+ <p class="sub rv">Design services for businesses, clubs, creators and individuals.</p>
+ <div class="services">
+  <div class="svc rv"><div class="ic">✦</div><h3>Logo Design</h3><p>Simple, scalable logos that represent your business.</p></div>
+  <div class="svc rv" style="--d:.1s"><div class="ic">◎</div><h3>Brand Identity</h3><p>Logo systems, colours and style for a consistent look.</p></div>
+  <div class="svc rv" style="--d:.2s"><div class="ic">▶</div><h3>Thumbnails &amp; Social</h3><p>Click-worthy thumbnails and social media graphics.</p></div>
+  <div class="svc rv"><div class="ic">❏</div><h3>Print Design</h3><p>ID cards, invitation cards, templates and more.</p></div>
+  <div class="svc rv" style="--d:.1s"><div class="ic">👕</div><h3>Apparel &amp; Merch</h3><p>Hoodie and tote bag designs with realistic mockups.</p></div>
+  <div class="svc rv" style="--d:.2s"><div class="ic">✉</div><h3>Custom Work</h3><p>Something else in mind? Let's talk about it.</p></div>
+ </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+ <div class="eyebrow grad rv">Portfolio</div>
+ <h2 class="rv">Selected work</h2>
+ <p class="sub rv">Tap any project to see the full case study on Behance.</p>
+ <div class="filters rv" id="filters">
+  <button class="on" data-f="all">All</button><button data-f="Logo">Logo &amp; Brand</button><button data-f="Print">Print</button><button data-f="Merch">Merch</button><button data-f="Social">Thumbnails</button>
+ </div>
+ <div class="grid" id="grid"></div>
+ <div class="more rv"><a class="btn fill" href="https://www.behance.net/rejwanraafi" target="_blank" rel="noopener">See all on Behance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+ <div class="eyebrow grad rv">Contact</div>
+ <h2 class="rv">Let's work together</h2>
+ <p class="sub rv">Tell me about your project and I'll get back to you soon.</p>
+ <div class="contact">
+  <div class="cl">
+   <a class="rv" href="mailto:mdrejwan2580@gmail.com"><div class="ic">✉</div><div><small>Email</small>mdrejwan2580@gmail.com</div></a>
+   <a class="rv" style="--d:.1s" href="tel:+8801945359571"><div class="ic">☎</div><div><small>Phone / WhatsApp</small>01945359571</div></a>
+   <a class="rv" style="--d:.2s" href="https://www.behance.net/rejwanraafi" target="_blank" rel="noopener"><div class="ic">Bē</div><div><small>Behance</small>behance.net/rejwanraafi</div></a>
+   <a class="rv" style="--d:.3s" href="https://www.facebook.com/RJ.rejwanrafi" target="_blank" rel="noopener"><div class="ic">f</div><div><small>Facebook</small>facebook.com/RJ.rejwanrafi</div></a>
+  </div>
+  <form id="f" class="rv">
+   <input id="n" placeholder="Your name" required>
+   <input id="e" type="email" placeholder="Your email" required>
+   <textarea id="m" placeholder="Tell me about your project" required></textarea>
+   <button class="btn fill" type="submit">Send message</button>
+  </form>
+ </div>
+</div></section>
+</main>
+
+<footer>© <span id="y"></span> Rejwan Rafi · Graphic Designer · Bogra, Bangladesh</footer>
+<button id="top-btn" aria-label="Back to top">↑</button>
+
+<script>
+const B="https://mir-s3-cdn-cf.behance.net/projects/404/",G="https://www.behance.net/gallery/";
+const P=[
+["Giveaway Predict","Social","a5bf2d257275599.Y3JvcCwzNjMxLDI4NDAsMCw2OTI.png","257275599/Giveaway-Predict"],
+["Committee Template for Club","Print","7ea431257275397.Y3JvcCwxNzE4LDEzNDMsMCwzNTI.jpeg","257275397/Committee-template-for-CLUB"],
+["The Daily Corporate ID Card","Print","183b22257275165.Y3JvcCwyNTI4LDE5NzcsMCwxMzE.jpg","257275165/The-daily-corporate-ID-card"],
+["SYNC Logo","Logo","dd4a4b257274771.Y3JvcCwxNzAxLDEzMzAsMTcyLDEwMQ.jpeg","257274771/SYNC-Logo"],
+["Textile Engineering Management Logo","Logo","b5600a257274411.Y3JvcCwxODQ5LDE0NDYsNDM0LDUw.jpg","257274411/Textile-Engineering-Management-Logo"],
+["Sun Soft Wash (SSW) Brand Identity","Logo","46e671251968965.Y3JvcCwxMDIwLDc5OCwyNzAsMA.png","251968965/Sun-Soft-Wash-%28SSW%29-Brand-Identity-Logo-Design"],
+["Tote Bag Design with Mockup","Merch","d5e3a6238790161.Y3JvcCw1NzUzLDQ1MDAsMTI4LDA.jpg","238790161/Tote-bag-Design-with-Mockup"],
+["Invitation Card Design","Print","68896a238789777.Y3JvcCwxNzg5LDE0MDAsMTA2LDA.jpg","238789777/Invitation-card-design"],
+["Hoodie Design","Merch","7f4059237977705.Y3JvcCwzODM1LDMwMDAsODUsMA.jpg","237977705/Hoddie-Design"],
+["Thumbnail Design","Social","7e8df8230335023.Y3JvcCw4MjgsNjQ3LDAsMTg.jpg","230335023/Thumbnail-Design"],
+["Thumbnail Design II","Social","b7f4e6230334401.Y3JvcCw4MjgsNjQ3LDAsMTg.jpg","230334401/Thumbnail-Design"],
+["Logo Design for Zest & Best","Logo","5b0b73226694143.Y3JvcCwyNzk0LDIxODUsNzk1LDMzMQ.jpg","226694143/Logo-Design-for-zest-best"]
+];
+const L={Logo:"Logo & Brand",Print:"Print",Merch:"Merch",Social:"Thumbnail"};
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+
+/* build work grid: local image first (images/1.jpg ...), then Behance, then gradient fallback */
+const grid=$("#grid");
+grid.innerHTML=P.map((p,i)=>`<a class="work rv" style="--d:${(i%3)*.08}s" data-c="${p[1]}" href="${G+p[3]}" target="_blank" rel="noopener">
+<div class="im"><img data-i="${i}" data-remote="${B+p[2]}" alt="${p[0]}" width="404" height="303" decoding="async" referrerpolicy="no-referrer"><span class="ov">View project ↗</span></div>
+<div class="t"><small class="grad">${L[p[1]]}</small><h3>${p[0]}</h3></div></a>`).join("");
+
+function loadImg(img){
+ const box=img.parentElement,tries=[`images/${+img.dataset.i+1}.jpg`,img.dataset.remote];
+ let k=0;
+ const next=()=>{ if(k<tries.length){img.src=tries[k++];}else{box.classList.add("fail");box.prepend(document.createTextNode(img.alt.charAt(0)));img.remove();} };
+ img.onload=()=>box.classList.add("ok");
+ img.onerror=next;
+ next();
+}
+/* load images just before they scroll into view */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){loadImg(e.target);io.unobserve(e.target)}}),{rootMargin:"600px"});
+$$("#grid img").forEach(i=>io.observe(i));
+
+/* filter */
+$("#filters").onclick=e=>{
+ const b=e.target.closest("button");if(!b)return;
+ $$("#filters button").forEach(x=>x.classList.toggle("on",x===b));
+ $$(".work").forEach(w=>{
+  const show=b.dataset.f==="all"||w.dataset.c===b.dataset.f;
+  w.classList.toggle("hide",!show);
+  if(show){w.classList.remove("in");void w.offsetWidth;w.classList.add("in")}
+ });
+};
+
+/* reveal on scroll */
+const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");ro.unobserve(e.target)}}),{threshold:.12});
+$$(".rv").forEach(el=>ro.observe(el));
+
+/* counters */
+const co=new IntersectionObserver(es=>es.forEach(e=>{
+ if(!e.isIntersecting)return;co.unobserve(e.target);
+ const el=e.target,n=+el.dataset.n,s=el.dataset.s||"",t0=performance.now();
+ (function f(t){const p=Math.min((t-t0)/1400,1);el.textContent=Math.round(n*(1-Math.pow(1-p,3))).toLocaleString()+s;if(p<1)requestAnimationFrame(f)})(t0);
+}),{threshold:.6});
+$$("[data-n]").forEach(el=>co.observe(el));
+
+/* progress bar, header shadow, back-to-top, active link */
+const secs=$$("main section"),links=$$("#links a");
+addEventListener("scroll",()=>{
+ const h=document.documentElement,y=scrollY;
+ $("#bar").style.width=(y/(h.scrollHeight-innerHeight)*100)+"%";
+ $("#hd").classList.toggle("s",y>10);
+ $("#top-btn").classList.toggle("show",y>500);
+ let cur="";secs.forEach(s=>{if(y>=s.offsetTop-140)cur=s.id});
+ links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+cur));
+},{passive:true});
+$("#top-btn").onclick=()=>scrollTo({top:0,behavior:"smooth"});
+
+/* button ripple */
+$$(".btn").forEach(b=>b.addEventListener("click",e=>{
+ const r=b.getBoundingClientRect(),d=Math.max(r.width,r.height),s=document.createElement("span");
+ s.className="rip";s.style.cssText=`width:${d}px;height:${d}px;left:${e.clientX-r.left-d/2}px;top:${e.clientY-r.top-d/2}px`;
+ b.appendChild(s);setTimeout(()=>s.remove(),600);
+}));
+
+/* contact form -> email app */
+$("#f").onsubmit=ev=>{
+ ev.preventDefault();
+ const nm=$("#n").value,em=$("#e").value,ms=$("#m").value;
+ location.href="mailto:mdrejwan2580@gmail.com?subject="+encodeURIComponent("Project inquiry from "+nm)+"&body="+encodeURIComponent(ms+"\n\n"+nm+" ("+em+")");
+};
+$("#y").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
